@@ -46,7 +46,7 @@ header p {
 
 .timeline-item {
   width: 100%;
-  margin-bottom: 30px;
+  margin-bottom: -80px;
 }
 
 .timeline-item:nth-child(even) .timeline-content {
@@ -128,6 +128,16 @@ a:hover, a:active, a:focus {
   text-decoration: none;
 }
 
+.images {
+	width: 100%;
+	box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.images:hover {
+  transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+
+
 .timeline-card {
   padding: 0 !important;
 }
@@ -175,21 +185,31 @@ blockquote {
   right: 0;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
+
   .timeline::before {
     left: 50px;
   }
+
   .timeline .timeline-img {
     left: 50px;
   }
+
   .timeline .timeline-content {
     max-width: 100%;
     width: auto;
     margin-left: 70px;
   }
+
+  .timeline-item {
+    width: 100%;
+    margin-bottom: 70px;
+  }
+
   .timeline .timeline-item:nth-child(even) .timeline-content {
     float: none;
   }
+
   .timeline .timeline-item:nth-child(odd) .timeline-content::after {
     content: '';
     position: absolute;
